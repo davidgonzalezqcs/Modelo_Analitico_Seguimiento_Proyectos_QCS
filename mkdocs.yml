@@ -1,0 +1,62 @@
+site_name: Modelo Analítico Seguimiento de Proyectos
+
+# Navegación principal de la documentación
+nav:
+  - 00. Inicio: 
+    - Introducción: index.md                     # Página de inicio
+    #- Instalación y Configuración: instalacion.md
+    #- Conexión a Bases de Datos: conexion_BD.md
+    #- Buenas Prácticas: buenaspracticas.md     
+  #- 01. Conexiones Automáticas a Zoho:
+  #- 02. Conexiones Automáticas a Google Drive:
+
+
+# Configuración del tema y diseño visual
+theme:
+  name: material                         # Tema Material para un diseño moderno
+  highlightjs: true
+  language: es                           # Idioma en español para traducciones en el sitio
+  features:
+    - navigation                  # Expande la navegación del menú lateral
+    #- navigation.tabs                   # Usa pestañas de navegación (desactiva si no es necesario)
+  palette:
+    primary: "23abf7"                   # Color principal personalizado
+    accent: "light-blue"                 # Color de acento personalizado
+  # icon:
+  #   logo: "LogoQCS"  # especifica la ruta del nuevo ícono aquí
+# Configuración de plugins de MkDocs
+plugins:
+  - search                               # Activa el buscador de la documentación
+  - pagetree
+# Extensiones Markdown
+markdown_extensions:
+  - toc:
+      permalink: true                    # Agrega enlaces permanentes en el índice de contenido
+      toc_depth: 3  # Limita la profundidad del índice a títulos hasta nivel 3 (###)
+  - tables                               # Soporte para tablas en Markdown
+  - admonition                           # Admoniciones para mensajes resaltados
+  - footnotes                            # Soporte de notas al pie
+  - def_list                             # Listas de definiciones
+  - abbr                                 # Abreviaciones
+  - codehilite:
+      guess_lang: false                  # Resaltado de sintaxis de código
+  - pymdownx.details                     # Soporte para detalles expandibles
+  - attr_list                            # Atributos de lista
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html                           # Permite HTML dentro de Markdown
+  - pymdownx.superfences:                # Superfences para habilitar diagramas Mermaid
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: M
+          class: sql
+          format: !!python/name:pymdownx.superfences.fence_code_format
+# Archivos adicionales de JavaScript y CSS
+#extra_javascript:
+#  - js/init_mermaid.js                   # Script de inicialización de Mermaid para diagramas
+
+#extra_css:
+#  - css/extra.css                        # Archivo de estilos personalizados para el look & feel
