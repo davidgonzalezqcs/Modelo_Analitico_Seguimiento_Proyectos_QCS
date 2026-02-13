@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Inicio
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Texto de Preuba
 
 ## Commands
 
