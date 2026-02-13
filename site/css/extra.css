@@ -19,18 +19,65 @@ a {
   background-color: white;
   color: rgb(28, 24, 67);
   height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__inner {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .md-header__title {
+    font-family: 'Segoe UI';
     flex-grow: 1;
-    font-size: .9rem;
-    height: 3.4rem;
-    line-height: 3.7rem;
-}
-.md-header__topic:first-child {
-    font-weight: 300
+    font-size: 1.2rem;
+    height: auto;
+    line-height: 1.4;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
 }
 
+.md-header__topic {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+}
+/* Ajuste para el título del tema en la barra superior*/
+.md-header__topic:first-child {
+    font-weight: 500; /* negrilla el título del tema en la barra superior */
+    white-space: normal;   /* permite que el texto haga salto de línea */
+    word-break: break-word;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-self: center;
+}
+
+.md-header__ellipsis {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-header__ellipsis .md-header__topic {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__ellipsis .md-ellipsis {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 .md-header-nav__title ,
 .md-header-nav__logo img {
@@ -49,6 +96,36 @@ a {
 /* Ajutes boton de busqueda */
 .md-search-result__icon:after {
     background-color: rgb(0, 107, 255);
+}
+
+.md-search__form {
+  background-color: #ffffff;
+  border: 2px solid #BFBFBF;
+  border-radius: 8px;
+  color: #232E3C;
+}
+
+.md-search__icon,
+.md-search__icon:hover,
+.md-search__icon svg {
+  color: #BFBFBF !important;
+  fill: #BFBFBF !important;
+}
+.md-search__icon {
+  color: #BFBFBF;
+  font-size: 1.2em;      /* aumenta 20% */
+  transform: scale(1.2); /* por si font-size no afecta el ícono SVG */
+}
+
+.md-search__input::placeholder {
+  color:  #BFBFBF;  /* color del texto placeholder */
+  
+}
+
+.md-search__input:focus,
+.md-search__input:hover {
+  background-color: #F2F2F2;  /* el mismo color que pusiste en md-search__form */
+  color: #232E3C;
 }
 
 
@@ -72,11 +149,6 @@ a {
     width: 180px; /* Ajuste de ancho para la barra lateral derecha */
 }
 
-/* Ajusta la barra de navegación superior para alinearse al nuevo ancho */
-.md-header {
-    padding-left: 180px;  /* Alineación basada en la barra lateral izquierda */
-    padding-right: 180px; /* Alineación basada en la barra lateral derecha */
-}
 
 /* Asegura que el contenedor general ocupe toda la pantalla */
 .md-main {
@@ -98,7 +170,7 @@ a {
 /* Estilos para Títulos de Secciones en color amarillo y en negrita */
 .section-title,
 h1, h2, h3 {
-    color: rgb(0, 112, 192); /* Amarillo QCS */
+    color:#2B3748; /* Amarillo QCS */
     font-weight: bold;
     text-transform: uppercase; /* Mayúsculas */
 }
@@ -107,8 +179,10 @@ h1, h2, h3 {
 h1.section-title,
 h2.section-title,
 h3.section-title {
-    color: rgb(35, 171, 247); /* Amarillo QCS */
+    color: #2B3748; /* Amarillo QCS */
     font-weight: bold;
+    white-space: normal;   /* permite que el texto haga salto de línea */
+    word-break: break-word;
 }
 
 .md-typeset h1,.md-typeset h2 {
@@ -128,14 +202,15 @@ h3.section-title {
     text-overflow: ellipsis;
 }
 .md-nav--primary .md-nav__title[for=__drawer] {
-        background-color: white;
-        color: white;
-        font-weight: 300;
-        border-color: black;
+  background-color: white;
+  color: white;
+  font-weight: 300;
+  border-color: black;
+}
 
-    }
- 
-
+.md-nav--primary .md-nav__link:hover {
+  color: #FFAC00 !important;
+}    
 /* --- Estilos de la Barra Lateral Derecha --- */
 
 /* --- Ajustes de la Barra Lateral Derecha --- */
@@ -164,6 +239,9 @@ h3.section-title {
 .md-sidebar .md-nav__link {
     color: #2A52BE;
 }
+.md-sidebar .md-nav__link:hover {
+  color: #FFAC00 !important;
+}
 
 /* --- Ajustes para el Botón de Menú --- */
 
@@ -182,6 +260,8 @@ h3.section-title {
 
 
 
+
+
 /* --- Ajustes de Color de la Barra Superior --- */
 
 .md-header {
@@ -191,7 +271,7 @@ h3.section-title {
 .md-header .md-header-nav__title,
 .md-header .md-header-nav__button,
 .md-header .md-icon {
-    color: #ffffff;
+    color: rgb(28, 24, 67);
 }
 
 /* --- Otros Ajustes de Estilo --- */
@@ -338,5 +418,20 @@ p, li {
     display: block;
     margin: auto;
 }
+/* Estilo para el pie de página */
+.md-copyright {
+    /*background-color: white;*/
+    color: var(--md-footer-fg-color--lighter);
+    font-size: .64rem;
+    margin: auto .6rem;
+    padding: .4rem 0;
+    width: 100%;
+}
 
+.md-footer-meta__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: .2rem;
+}
 

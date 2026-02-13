@@ -28,11 +28,15 @@ theme:
     accent: "light-blue"                 # Color de acento personalizado
   # icon:
   #   logo: "LogoQCS"  # especifica la ruta del nuevo ícono aquí
+  favicon: images/logo_favicon.png               # Imagen personalizada para el favicon del sitio, que se muestra en la pestaña del navegador
 # Configuración de plugins de MkDocs
 plugins:
   - mkdocstrings
   - search                               # Activa el buscador de la documentación
   - pagetree
+  - git-revision-date-localized:
+      type: date
+      locale: es
 # Extensiones Markdown
 markdown_extensions:
   - toc:
@@ -60,8 +64,18 @@ markdown_extensions:
           class: sql
           format: !!python/name:pymdownx.superfences.fence_code_format
 # Archivos adicionales de JavaScript y CSS
-#extra_javascript:
+extra_javascript:
 #  - js/init_mermaid.js                   # Script de inicialización de Mermaid para diagramas
+  - javascripts/extra.js
+
 
 extra_css:
   - css/extra.css                        # Archivo de estilos personalizados para el look & feel
+
+copyright: >
+  Copyright &copy; 2026 Quality Customer Service &nbsp;|&nbsp;
+  <a href="https://drive.google.com/drive/folders/1ChEV4CRcbFDtFibq9ohpMsSas7pg85wX" target="_blank">Fuentes</a> &nbsp;|&nbsp;
+  <a href="https://drive.google.com/drive/folders/1ufpdya1F_Pbys_qZ2Q-1zYk7Yfu6VidJ" target="_blank">ETLs</a> &nbsp;|&nbsp;
+  <a href="https://drive.google.com/drive/folders/1Cn95SOx5md1JVXtP6Y-WNGX6I3Un39Fz" target="_blank">Tablero Power BI</a>
+  <br>
+  Última actualización: {{ git_revision_date_localized }}
