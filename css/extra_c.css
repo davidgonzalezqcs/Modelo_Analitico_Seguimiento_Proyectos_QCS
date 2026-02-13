@@ -1,0 +1,333 @@
+/* ============================================
+   GLOBAL
+   ============================================ */
+
+body {
+  background-color: white;
+  color: rgb(63, 74, 95);
+}
+
+a {
+  color: rgb(0, 107, 255);
+}
+
+p, li {
+  line-height: 1.6;
+  font-size: 1.02em;
+  margin-bottom: 10px;
+}
+
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.md-header {
+  background-color: white;
+  color: rgb(28, 24, 67);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra suave */
+  border-bottom: 1px solid #e0e0e0; /* restaura la línea */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.md-header__inner {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.md-header__title {
+  font-family: 'Segoe UI';
+  flex-grow: 1;
+  font-size: 1.2rem;
+  height: auto;
+  line-height: 1.4;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__ellipsis {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-header__topic,
+.md-header__ellipsis .md-header__topic {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__topic:first-child {
+  font-weight: 700;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.md-header__ellipsis .md-ellipsis {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-header__button.md-logo img {
+  display: block;
+  height: auto;
+  width: 110px;
+}
+
+
+/* ============================================
+   BARRA DE BÚSQUEDA
+   ============================================ */
+
+.md-search__form {
+  background-color: #ffffff;
+  border: 2px solid #BFBFBF;
+  border-radius: 8px;
+  color: #232E3C;
+}
+
+.md-search__icon,
+.md-search__icon:hover,
+.md-search__icon svg {
+  color: #BFBFBF !important;
+  fill: #BFBFBF !important;
+  font-size: 1.2em;
+  transform: scale(1.2);
+}
+
+.md-search__input::placeholder {
+  color: #BFBFBF;
+}
+
+.md-search__input:focus,
+.md-search__input:hover {
+  background-color: #F2F2F2;
+  color: #232E3C;
+}
+
+.md-search-result__icon:after {
+  background-color: rgb(0, 107, 255);
+}
+
+
+/* ============================================
+   LAYOUT PRINCIPAL
+   ============================================ */
+
+.md-main {
+  max-width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.md-content {
+  max-width: 100%;
+  margin: auto;
+}
+
+.md-sidebar {
+  width: 250px;
+}
+
+.md-sidebar--secondary {
+  width: 180px;
+}
+
+.md-typeset {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* ============================================
+   TÍTULOS
+   ============================================ */
+
+h1, h2, h3 {
+  color: rgb(0, 112, 192);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: rgb(28, 24, 67);
+}
+
+.subsection-title {
+  color: #333;
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+
+
+/* ============================================
+   BARRA LATERAL IZQUIERDA
+   ============================================ */
+
+.md-nav__title {
+  color: white;
+  display: block;
+  font-weight: 700;
+  overflow: hidden;
+  padding: 0 0.6rem;
+  text-overflow: ellipsis;
+}
+
+.md-nav--primary .md-nav__title[for=__drawer] {
+  background-color: white;
+  color: white;
+  font-weight: 300;
+  border-color: black;
+}
+
+.md-sidebar .md-nav__link {
+  color: #2A52BE;
+  font-size: 1.2em;
+}
+
+.md-sidebar .md-nav__title {
+  font-size: 0.95em;
+}
+
+
+/* ============================================
+   BARRA LATERAL DERECHA
+   ============================================ */
+
+.md-sidebar--secondary .md-nav__title {
+  color: #2A52BE;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.95em;
+}
+
+/* Oculta el texto duplicado "Tabla de contenidos" */
+.md-sidebar--secondary .md-nav__title span {
+  display: none;
+}
+
+.md-sidebar--secondary .md-nav__link {
+  color: #2A52BE;
+  font-size: 0.9em;
+}
+
+
+/* ============================================
+   LISTAS
+   ============================================ */
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+ul ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+ul li + li {
+  margin-top: 5px;
+}
+
+
+/* ============================================
+   IMÁGENES Y DIAGRAMAS
+   ============================================ */
+
+img.diagram,
+.img-centered {
+  display: block;
+  margin: 0 auto;
+}
+
+img.diagram {
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+
+/* ============================================
+   TABLAS
+   ============================================ */
+
+.md-typeset table::-webkit-scrollbar {
+  height: 10px;
+}
+
+.md-typeset table::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.md-typeset table::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* ============================================
+   DIAGRAMAS MERMAID
+   ============================================ */
+
+.mermaid {
+  max-width: 100%;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mermaid .label,
+.mermaid .edgeLabel {
+  fill: #333333;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+}
+
+.mermaid .edgePath path {
+  stroke-width: 2px;
+  stroke: #b1740f;
+}
+
+.mermaid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.mermaid::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.mermaid::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
