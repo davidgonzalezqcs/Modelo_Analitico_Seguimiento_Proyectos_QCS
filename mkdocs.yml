@@ -2,13 +2,27 @@ site_name: Modelo Analítico Seguimiento de Proyectos
 
 # Navegación principal de la documentación
 nav:
-  - 00. Inicio: 
+  - Inicio: 
     - Introducción: index.md                     # Página de inicio
     #- Instalación y Configuración: instalacion.md
     #- Conexión a Bases de Datos: conexion_BD.md
     #- Buenas Prácticas: buenaspracticas.md     
-  #- 01. Conexiones Automáticas a Zoho:
-  #- 02. Conexiones Automáticas a Google Drive:
+  - 1. Conexiones Automáticas a Zoho:
+    - 1.1 Configuración de Conexión: 01.Conexiones_Zoho/01.Configuracion_Conexion.md
+    - 1.2 ETL de Extracción de Datos: 01.Conexiones_Zoho/02.ETL_Extraccion_Datos.md
+  - 2. Conexiones Automáticas a Google Drive:
+    - 2.1 Configuración de Conexión: 02.Conexiones_Google_Drive/01.Configuracion_Conexion.md
+    - 2.2 ETL de Extracción de Datos: 02.Conexiones_Google_Drive/02.ETL_Extraccion_Datos.md
+  - 3. Tablero de Seguimiento de Proyectos:
+    - 3.1 Tranformación de Datos para Tablero: 03.Tablero/01.Transformacion_Datos.md
+    - 3.2 Modelo Relacional y Medidas: 03.Tablero/02.Modelo_Relacional_Medidas.md
+    - 3.3 Visualizaciones:
+      - Inicio: 03.Tablero/Visualizaciones/00.Inicio.md
+      - Cifras Generales: 03.Tablero/Visualizaciones/01.Cifras_Generales.md
+      - Informe por Proyecto y Épicas: 03.Tablero/Visualizaciones/02.Informe_Proyecto_Epicas.md
+      - Registro Diario: 03.Tablero/Visualizaciones/03.Registro_Diario.md
+      - Reprocesos: 03.Tablero/Visualizaciones/04.Reprocesos.md
+      - Comportamiento Histórico: 03.Tablero/Visualizaciones/05.Comportamiento_Historico.md
 
 
 # Configuración del tema y diseño visual
@@ -75,7 +89,7 @@ extra_css:
 hooks:
   - docs/hooks/copyright.py
 copyright: >
-  Copyright &copy; 2026 Quality Customer Service &nbsp;|&nbsp;
+  Copyright &copy; {{ anio }} Quality Customer Service &nbsp;|&nbsp;
   <a href="https://drive.google.com/drive/folders/1ChEV4CRcbFDtFibq9ohpMsSas7pg85wX" target="_blank">Fuentes</a> &nbsp;|&nbsp;
   <a href="https://drive.google.com/drive/folders/1ufpdya1F_Pbys_qZ2Q-1zYk7Yfu6VidJ" target="_blank">ETLs</a> &nbsp;|&nbsp;
   <a href="https://drive.google.com/drive/folders/1Cn95SOx5md1JVXtP6Y-WNGX6I3Un39Fz" target="_blank">Tablero Power BI</a>
