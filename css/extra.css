@@ -170,23 +170,25 @@ a {
 /* Estilos para Títulos de Secciones en color amarillo y en negrita */
 .section-title,
 h1, h2, h3 {
-    color:#2B3748; /* Amarillo QCS */
-    font-weight: bold;
-    text-transform: uppercase; /* Mayúsculas */
+    color: rgb(28, 24, 67); /*#2B3748;*/ /* Amarillo QCS */
+    font-weight: 900;
+    /*text-transform: uppercase; */  /* Mayúsculas */
+    font-family: 'Segoe UI';
 }
 
 /* Aplica el estilo de título a encabezados específicos dentro de las secciones */
 h1.section-title,
 h2.section-title,
 h3.section-title {
-    color: #2B3748; /* Amarillo QCS */
-    font-weight: bold;
+    font-family: 'Segoe UI';
+    color: rgb(28, 24, 67); /* Amarillo QCS */
+    font-weight: 900;
     white-space: normal;   /* permite que el texto haga salto de línea */
     word-break: break-word;
 }
 
 .md-typeset h1,.md-typeset h2 {
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: -.01em ;
     color: rgb(28, 24, 67);
 }

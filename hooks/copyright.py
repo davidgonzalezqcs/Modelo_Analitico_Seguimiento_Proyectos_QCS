@@ -8,6 +8,8 @@ MESES = {
 
 def on_config(config):
     hoy = datetime.now()
-    fecha = f"{hoy.day} de {MESES[hoy.month]} de {hoy.year}"
+    anio = hoy.year  # ← salida independiente del año
+    fecha = f"{hoy.day} de {MESES[hoy.month]} de {anio}"
     config.copyright = config.copyright.replace("{{ fecha }}", fecha)
+    config.copyright = config.copyright.replace("{{ anio }}", str(anio))
     return config
